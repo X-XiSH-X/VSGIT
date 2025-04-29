@@ -16,7 +16,8 @@ class Program
             Console.WriteLine("1. Сложение (+)");
             Console.WriteLine("2. Вычитание (-)");
             Console.WriteLine("3. Умножение (*)");
-            Console.WriteLine("4. Выход");
+            Console.WriteLine("4. Деление (/)");
+            Console.WriteLine("5. Выход");
             Console.Write("Выберите пункт: ");
 
             var choice = Console.ReadLine();
@@ -33,6 +34,9 @@ class Program
                     Multiply();
                     break;
                 case "4":
+                    Divide();
+                    break;
+                case "5":
                     return;
                 default:
                     Console.WriteLine("Неверный выбор!");
@@ -66,5 +70,13 @@ class Program
     static void Multiply()
     {
         Console.WriteLine($"Результат: {A * B}");
+    }
+
+    static void Divide()
+    {
+        if (B == 0)
+            Console.WriteLine("Ошибка: деление на ноль!");
+        else
+            Console.WriteLine($"Результат: {A / B}");
     }
 }
