@@ -15,7 +15,8 @@ class Program
             Console.WriteLine("\nМеню:");
             Console.WriteLine("1. Сложение (+)");
             Console.WriteLine("2. Вычитание (-)");
-            Console.WriteLine("3. Выход");
+            Console.WriteLine("3. Умножение (*)");
+            Console.WriteLine("4. Выход");
             Console.Write("Выберите пункт: ");
 
             var choice = Console.ReadLine();
@@ -29,6 +30,9 @@ class Program
                     Subtract();
                     break;
                 case "3":
+                    Multiply();
+                    break;
+                case "4":
                     return;
                 default:
                     Console.WriteLine("Неверный выбор!");
@@ -57,5 +61,10 @@ class Program
     static void Subtract()
     {
         Console.WriteLine($"Результат: {A - B}");
+    }
+
+    static void Multiply()
+    {
+        Console.WriteLine($"Результат: {A * B}");
     }
 }
